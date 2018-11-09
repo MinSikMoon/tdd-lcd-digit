@@ -17,7 +17,7 @@ public class digit {
 		//a
 		assertEquals( "._.\n"
 					+ "|.|\n"
-					+ "|_|", result);
+					+ "|_|\n", result);
 	}
 	@Test
 	public void test_num1() {
@@ -26,9 +26,9 @@ public class digit {
 		//a
 		String result = dm.makeDigit(1);
 		//a
-		assertEquals( "._.\n"
-					+ "|.|\n"
-					+ "|_|", result);
+		assertEquals( "...\n"
+					+ "..|\n"
+					+ "..|\n", result);
 	}
 	
 	
