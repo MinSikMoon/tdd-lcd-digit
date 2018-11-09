@@ -38,12 +38,9 @@ public class digit {
 		DigitMaker dm = new DigitMaker();
 		//a
 		//a
-		String firstLine = "...\n"; 
-		String secondLine = "..|\n";
-		String thirdLine = "..|\n";
-		assertEquals( firstLine
-				+ secondLine
-				+ thirdLine, dm.makeDigit(1));
+		assertEquals( "._.._.\n"
+					+ "|.||.|\n"
+					+ "|_||_|\n", dm.makeDigit(00));
 	}
 	
 }

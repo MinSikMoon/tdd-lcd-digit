@@ -6,6 +6,7 @@ public class DigitMaker {
 	static String[] thirdLines =  {"|_|", "..|", "|_.", "._|"};
 
 	public String makeDigit(int i) {
+		
 		String firstLine = firstLines[i];//"._."; 
 		String secondLine = secondLines[i];//"|.|"; 
 		String thirdLine = thirdLines[i];//"|_|";
