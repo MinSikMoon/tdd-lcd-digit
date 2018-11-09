@@ -11,13 +11,12 @@ public class DigitMaker {
 				String numberString = String.valueOf(i);
 				String[] line = new String[numberString.length()];
 				
-				String firstLine = getFirstLine(numberString, line); 
-				
+				String firstLine = getFirstLine(numberString); 
 				String secondLine = getSecondLine(numberString);
-				
 				String thirdLine = getThirdLine(numberString);
 				
 				String[] lines = new String[]{firstLine, secondLine, thirdLine};
+				
 				return String.join("\n", lines) + "\n";
 			}
 		}
@@ -40,6 +39,16 @@ public class DigitMaker {
 		return getSecondLine(numberString);
 	}
 
+	private String getFirstLine(String numberString) {
+		String[] line = new String[numberString.length()];
+		for(int j=0; j< numberString.length(); j++){
+			String[] firstLines2 = firstLines;
+			line[j] = firstLines2[numberString.charAt(j) - '0'];
+		}
+		String firstLine =  String.join(" ", line);
+		return firstLine;
+	}
+	
 	private String getSecondLine(String numberString) {
 		String[] line = new String[numberString.length()];
 		for(int j=0; j< numberString.length(); j++){
