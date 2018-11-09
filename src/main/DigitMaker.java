@@ -16,12 +16,14 @@ public class DigitMaker {
 				}
 				String firstLine = String.join(" ", line); 
 				
-				line[0] = secondLines[numberString.charAt(0) - '0'];
-				line[1] = secondLines[numberString.charAt(1) - '0'];
+				for(int j=0; j< numberString.length(); j++){
+					line[j] = secondLines[numberString.charAt(j) - '0'];
+				}
 				String secondLine = String.join(" ", line);//secondLines[1] + " " +secondLines[0];
 				
-				line[0] = thirdLines[numberString.charAt(0) - '0'];
-				line[1] = thirdLines[numberString.charAt(1) - '0'];
+				for(int j=0; j< numberString.length(); j++){
+					line[j] = thirdLines[numberString.charAt(j) - '0'];
+				}
 				String thirdLine =  String.join(" ", line);//thirdLines[1]+ " " +thirdLines[0];
 				
 				String[] lines = new String[]{firstLine, secondLine, thirdLine};
