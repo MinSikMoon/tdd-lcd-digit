@@ -31,6 +31,19 @@ public class digit {
 	}
 	
 	
+	//리팩토링 시작
+	@Test
+	public void test_num2() {
+		//a
+		DigitMaker dm = new DigitMaker();
+		//a
+		//a
+		assertEquals( "._.\n"
+					+ "._|\n"
+					+ "|_.\n", dm.makeDigit(2));
+	}
+	
+	
 	
 	
 	
