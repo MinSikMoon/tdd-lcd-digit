@@ -40,8 +40,7 @@ public class DigitMaker {
 	}
 
 	private String getFirstLine(String numberString) {
-		String[] curLines = firstLines;
-		return getLine(numberString, curLines);
+		return getLine(numberString, firstLines);
 	}
 
 	private String getLine(String numberString, String[] curLines) {
@@ -53,8 +52,7 @@ public class DigitMaker {
 	}
 	
 	private String getSecondLine(String numberString) {
-		String[] curLines = secondLines;
-		return getLine(numberString, curLines);
+		return getLine(numberString, secondLines);
 	}
 
 	private String getThirdLine(String numberString, String[] line) {
@@ -62,8 +60,7 @@ public class DigitMaker {
 	}
 
 	private String getThirdLine(String numberString) {
-		String[] curLines = thirdLines;
-		return getLine(numberString, curLines);
+		return getLine(numberString, thirdLines);
 	}
 	
 }
