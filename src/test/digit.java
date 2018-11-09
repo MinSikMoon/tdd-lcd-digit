@@ -24,11 +24,10 @@ public class digit {
 		//a
 		DigitMaker dm = new DigitMaker();
 		//a
-		String result = dm.makeDigit(1);
 		//a
 		assertEquals( "...\n"
 					+ "..|\n"
-					+ "..|\n", result);
+					+ "..|\n", dm.makeDigit(1));
 	}
 	
 	
