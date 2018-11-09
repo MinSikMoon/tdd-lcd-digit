@@ -21,10 +21,7 @@ public class DigitMaker {
 				}
 				String secondLine = String.join(" ", line);//secondLines[1] + " " +secondLines[0];
 				
-				for(int j=0; j< numberString.length(); j++){
-					line[j] = thirdLines[numberString.charAt(j) - '0'];
-				}
-				String thirdLine =  String.join(" ", line);//thirdLines[1]+ " " +thirdLines[0];
+				String thirdLine = getThirdLine(numberString, line);
 				
 				String[] lines = new String[]{firstLine, secondLine, thirdLine};
 				return String.join("\n", lines) + "\n";
@@ -35,6 +32,14 @@ public class DigitMaker {
 		String thirdLine = thirdLines[i];//"|_|";
 		String[] lines = new String[]{firstLine, secondLine, thirdLine};
 		return String.join("\n", lines) + "\n";
+	}
+
+	private String getThirdLine(String numberString, String[] line) {
+		for(int j=0; j< numberString.length(); j++){
+			line[j] = thirdLines[numberString.charAt(j) - '0'];
+		}
+		String thirdLine =  String.join(" ", line);
+		return thirdLine;
 	}
 	
 }
