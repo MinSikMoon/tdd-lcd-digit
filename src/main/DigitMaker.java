@@ -11,17 +11,11 @@ public class DigitMaker {
 				String numberString = String.valueOf(i);
 				String[] line = new String[numberString.length()];
 				
-				for(int j=0; j< numberString.length(); j++){
-					line[j] = firstLines[numberString.charAt(j) - '0'];
-				}
-				String firstLine = String.join(" ", line); 
+				String firstLine = getFirstLine(numberString, line); 
 				
-				for(int j=0; j< numberString.length(); j++){
-					line[j] = secondLines[numberString.charAt(j) - '0'];
-				}
-				String secondLine = String.join(" ", line);//secondLines[1] + " " +secondLines[0];
+				String secondLine = getSecondLine(numberString);
 				
-				String thirdLine = getThirdLine(numberString, line);
+				String thirdLine = getThirdLine(numberString);
 				
 				String[] lines = new String[]{firstLine, secondLine, thirdLine};
 				return String.join("\n", lines) + "\n";
@@ -34,7 +28,33 @@ public class DigitMaker {
 		return String.join("\n", lines) + "\n";
 	}
 
+	private String getFirstLine(String numberString, String[] line) {
+		for(int j=0; j< numberString.length(); j++){
+			line[j] = firstLines[numberString.charAt(j) - '0'];
+		}
+		String firstLine = String.join(" ", line);
+		return firstLine;
+	}
+
+	private String getSecondLine(String numberString, String[] line) {
+		return getSecondLine(numberString);
+	}
+
+	private String getSecondLine(String numberString) {
+		String[] line = new String[numberString.length()];
+		for(int j=0; j< numberString.length(); j++){
+			line[j] = secondLines[numberString.charAt(j) - '0'];
+		}
+		String secondLine =  String.join(" ", line);
+		return secondLine;
+	}
+
 	private String getThirdLine(String numberString, String[] line) {
+		return getThirdLine(numberString);
+	}
+
+	private String getThirdLine(String numberString) {
+		String[] line = new String[numberString.length()];
 		for(int j=0; j< numberString.length(); j++){
 			line[j] = thirdLines[numberString.charAt(j) - '0'];
 		}
