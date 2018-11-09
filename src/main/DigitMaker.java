@@ -11,9 +11,9 @@ public class DigitMaker {
 				String numberString = String.valueOf(i);
 				String[] line = new String[numberString.length()];
 				
-				
-				line[0] = firstLines[numberString.charAt(0) - '0'];
-				line[1] = firstLines[numberString.charAt(1) - '0'];
+				for(int j=0; j< numberString.length(); j++){
+					line[j] = firstLines[numberString.charAt(j) - '0'];
+				}
 				String firstLine = String.join(" ", line); 
 				
 				line[0] = secondLines[numberString.charAt(0) - '0'];
