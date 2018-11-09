@@ -25,9 +25,12 @@ public class digit {
 		DigitMaker dm = new DigitMaker();
 		//a
 		//a
-		assertEquals( "...\n"
-					+ "..|\n"
-					+ "..|\n", dm.makeDigit(1));
+		String firstLine = "...\n"; //alt shift l
+		String secondLine = "..|\n";
+		String thirdLine = "..|\n";
+		assertEquals( firstLine
+					+ secondLine
+					+ thirdLine, dm.makeDigit(1));
 	}
 	
 	
@@ -37,10 +40,13 @@ public class digit {
 		//a
 		DigitMaker dm = new DigitMaker();
 		//a
+		String firstLine = "._."; //alt shift l
+		String secondLine = "._|";
+		String thirdLine = "|_.";
 		//a
-		assertEquals( "._.\n"
-					+ "._|\n"
-					+ "|_.\n", dm.makeDigit(2));
+		assertEquals( firstLine + "\n"
+				+ secondLine + "\n"
+				+ thirdLine + "\n", dm.makeDigit(2));
 	}
 	
 	
