@@ -25,12 +25,25 @@ public class digit {
 		DigitMaker dm = new DigitMaker();
 		//a
 		//a
-		String firstLine = "...\n"; //alt shift l
+		String firstLine = "...\n"; 
 		String secondLine = "..|\n";
 		String thirdLine = "..|\n";
 		assertEquals( firstLine
 					+ secondLine
 					+ thirdLine, dm.makeDigit(1));
+	}
+	@Test
+	public void test_num00() {
+		//a
+		DigitMaker dm = new DigitMaker();
+		//a
+		//a
+		String firstLine = "...\n"; 
+		String secondLine = "..|\n";
+		String thirdLine = "..|\n";
+		assertEquals( firstLine
+				+ secondLine
+				+ thirdLine, dm.makeDigit(1));
 	}
 	
 }
