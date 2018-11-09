@@ -33,28 +33,4 @@ public class digit {
 					+ thirdLine, dm.makeDigit(1));
 	}
 	
-	
-	//리팩토링 시작
-	@Test
-	public void test_num2() {
-		//a
-		DigitMaker dm = new DigitMaker();
-		//a
-		String firstLine = "._."; //alt shift l
-		String secondLine = "._|";
-		String thirdLine = "|_.";
-		
-		
-		//a
-		assertEquals( firstLine + "\n"
-					+ secondLine + "\n"
-					+ thirdLine + "\n", dm.makeDigit(2));
-	}
-	
-	
-	
-	
-	
-	
-	
 }
