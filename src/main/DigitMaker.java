@@ -8,9 +8,12 @@ public class DigitMaker {
 	public String makeDigit(int i) {
 		if(i/10 > 0){
 			if(i == 10){
-				String firstLine = firstLines[1] + " " +firstLines[0];//"._."; 
-				String secondLine = secondLines[1] + " " +secondLines[0];//"|.|"; 
-				String thirdLine = thirdLines[1]+ " " +thirdLines[0];//"|_|";
+				String[] line = new String[2];
+				line[0] = firstLines[1];
+				line[1] = firstLines[0];
+				String firstLine = String.join(" ", line); //firstLines[1] + " " +firstLines[0];
+				String secondLine = secondLines[1] + " " +secondLines[0];
+				String thirdLine = thirdLines[1]+ " " +thirdLines[0];
 				String[] lines = new String[]{firstLine, secondLine, thirdLine};
 				return String.join("\n", lines) + "\n";
 			}
