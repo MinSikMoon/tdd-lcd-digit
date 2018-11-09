@@ -38,9 +38,9 @@ public class digit {
 		DigitMaker dm = new DigitMaker();
 		//a
 		//a
-		assertEquals( "...._.\n"
-					+ "..||.|\n"
-					+ "..||_|\n", dm.makeDigit(10));
+		assertEquals( "... ._.\n"
+					+ "..| |.|\n"
+					+ "..| |_|\n", dm.makeDigit(10));
 	}
 	
 }
