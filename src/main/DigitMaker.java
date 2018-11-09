@@ -10,18 +10,18 @@ public class DigitMaker {
 			if(i == 10){
 				String numberString = String.valueOf(i);
 				String[] line = new String[numberString.length()];
+				
+				
 				line[0] = firstLines[numberString.charAt(0) - '0'];
 				line[1] = firstLines[numberString.charAt(1) - '0'];
 				String firstLine = String.join(" ", line); 
 				
-				String[] line2 = new String[2];
-				line[0] = secondLines[1];
-				line[1] = secondLines[0];
+				line[0] = secondLines[numberString.charAt(0) - '0'];
+				line[1] = secondLines[numberString.charAt(1) - '0'];
 				String secondLine = String.join(" ", line);//secondLines[1] + " " +secondLines[0];
 				
-				String[] line3 = new String[2];
-				line[0] = thirdLines[1];
-				line[1] = thirdLines[0];
+				line[0] = thirdLines[numberString.charAt(0) - '0'];
+				line[1] = thirdLines[numberString.charAt(1) - '0'];
 				String thirdLine =  String.join(" ", line);//thirdLines[1]+ " " +thirdLines[0];
 				
 				String[] lines = new String[]{firstLine, secondLine, thirdLine};
