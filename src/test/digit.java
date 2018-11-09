@@ -43,10 +43,12 @@ public class digit {
 		String firstLine = "._."; //alt shift l
 		String secondLine = "._|";
 		String thirdLine = "|_.";
+		
+		
 		//a
 		assertEquals( firstLine + "\n"
-				+ secondLine + "\n"
-				+ thirdLine + "\n", dm.makeDigit(2));
+					+ secondLine + "\n"
+					+ thirdLine + "\n", dm.makeDigit(2));
 	}
 	
 	
