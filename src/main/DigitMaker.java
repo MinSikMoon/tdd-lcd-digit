@@ -40,8 +40,12 @@ public class DigitMaker {
 	}
 
 	private String getFirstLine(String numberString) {
-		String[] line = new String[numberString.length()];
 		String[] curLines = firstLines;
+		return getLine(numberString, curLines);
+	}
+
+	private String getLine(String numberString, String[] curLines) {
+		String[] line = new String[numberString.length()];
 		for(int j=0; j< numberString.length(); j++){
 			line[j] = curLines[numberString.charAt(j) - '0'];
 		}
@@ -49,13 +53,8 @@ public class DigitMaker {
 	}
 	
 	private String getSecondLine(String numberString) {
-		String[] line = new String[numberString.length()];
 		String[] curLines = secondLines;
-		for(int j=0; j< numberString.length(); j++){
-			line[j] = curLines[numberString.charAt(j) - '0'];
-		}
-		String secondLine =  String.join(" ", line);
-		return secondLine;
+		return getLine(numberString, curLines);
 	}
 
 	private String getThirdLine(String numberString, String[] line) {
@@ -63,13 +62,8 @@ public class DigitMaker {
 	}
 
 	private String getThirdLine(String numberString) {
-		String[] line = new String[numberString.length()];
 		String[] curLines = thirdLines;
-		for(int j=0; j< numberString.length(); j++){
-			line[j] = curLines[numberString.charAt(j) - '0'];
-		}
-		String thirdLine =  String.join(" ", line);
-		return thirdLine;
+		return getLine(numberString, curLines);
 	}
 	
 }
