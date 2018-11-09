@@ -33,14 +33,14 @@ public class digit {
 					+ thirdLine, dm.makeDigit(1));
 	}
 	@Test
-	public void test_num00() {
+	public void test_num10() {
 		//a
 		DigitMaker dm = new DigitMaker();
 		//a
 		//a
-		assertEquals( "._.._.\n"
-					+ "|.||.|\n"
-					+ "|_||_|\n", dm.makeDigit(00));
+		assertEquals( "...._.\n"
+					+ "..||.|\n"
+					+ "..||_|\n", dm.makeDigit(10));
 	}
 	
 }
